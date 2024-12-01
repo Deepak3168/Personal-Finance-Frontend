@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Finance Tracker</title>
 </head>
 <body>
@@ -35,6 +34,126 @@
         <button type="submit" form="expenseForm" value="Submit">Add</button>
     </div>
     <script src="script.js"></script>
+    <style>
+        /* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color:  #00FF00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Navigation links styling */
+.nav {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    margin:10px;
+    padding: 20px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right:10;
+}
+
+.nav a {
+    color:  #00FF00;
+    background-color: black;
+    border: 1px solid #00FF00;
+    margin:10px;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on the links */
+.nav a:hover {
+    background-color: #00FF00;
+    color: black;
+}
+
+/* Main form container */
+.maindiv {
+    background-color: black;
+    border: 2px solid #00FF00;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* Input and form styling */
+form input,
+select {
+    background-color: black;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+/* Category dropdown specific styling */
+select {
+    border: 2px dotted #00FF00;
+    background-color: black;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    font-size: 16px;
+}
+
+/* Submit button styling */
+button {
+    background-color: black;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color:#00FF00;
+    color: black;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 600px) {
+    .maindiv {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    form input,
+    select,
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+}
+
+    </style>
 </body>
 </html>
 

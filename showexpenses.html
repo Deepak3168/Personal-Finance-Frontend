@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="showexpenses.css">
     <title>Finance Tracker</title>
 </head>
 <body>
@@ -51,5 +50,106 @@
     </div>
 
     <script src="showexpenses.js"></script>  <!-- Link to the JavaScript file -->
+    <style>
+        /* showexpenses.css */
+
+/* General styling with black background and green text */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Black background */
+    color: #00FF00; /* Green text */
+}
+
+/* Back Button */
+.back-btn {
+    margin: 20px;
+    text-align:left;
+}
+
+.back-btn a {
+    background-color: #000000; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #388E3C; /* Darker green border */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn a:hover {
+    background-color: #00FF00;
+    color: black;
+}
+
+/* Dropdown styling */
+.dropdown {
+    margin: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00FF00; /* Green border */
+    background-color: black; /* Black background */
+    color: #00FF00; /* Green text */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.expensesdiv {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FF00; /* Green text for the table */
+}
+
+th, td {
+    padding: 12px;
+    border: 2px solid #00FF00; /* Green border */
+}
+
+th {
+    background-color: #333; /* Dark background for header */
+    color: #00FF00; /* Green text */
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+td {
+    background-color: #000000; /* Black background for cells */
+}
+
+tr:nth-child(even) {
+    background-color: #111; /* Darker rows for contrast */
+}
+
+tr:hover {
+    background-color: #4CAF50; /* Green on hover */
+    color: black; /* Black text when hovered */
+}
+
+tr:hover td {
+    background-color: #4CAF50;
+    color: black; /* Text turns black on hover */
+}
+
+    </style>
 </body>
 </html>
