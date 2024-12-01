@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="showanalytics.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Finance Tracker</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-btn">
+        <a href="index.html">Back</a>
+    </div>
+
+    <div class="analytics-div">
+        <!-- Dropdown to select the month -->
+        <label for="monthSelect">Select Month:</label>
+        <select id="monthSelect">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+
+        <!-- Chart container for Pie Chart -->
+        <canvas id="expensePieChart" class="small-chart"></canvas>
+
+        <!-- Placeholder for other analytics charts -->
+        <canvas id="financeLineChart" class="small-chart" style="margin-top: 30px;"></canvas>
+    </div>
+
+    <!-- Script for rendering charts -->
+    <script>
+        // Monthly expenditure data for pie chart
+        const pieData = {
+            labels: ['Food', 'Rent', 'Entertainment', 'Transportation', 'Miscellaneous'],
+            datasets: [{
+                data: [300, 600, 150, 100, 50],  // Example data for a month
+                backgroundColor: ['#ff6384', '#36a2eb', '#cc65fe', '#ffce56', '#2ecc71'],
+                hoverOffset: 4
+            }]
+        };
+
+        const pieConfig = {
+            type: 'pie',
+            data: pieData,
+        };
+
+        // Render pie chart
+        const pieChart = new Chart(
+            document.getElementById('expensePieChart'),
+            pieConfig
+        );
+
+        // Example line chart for financial trends (placeholder data)
+        const lineData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+            datasets: [{
+                label: 'Total Expenses',
+                data: [500, 1000, 800, 1500, 700, 1200],
+                fill: false,
+                borderColor: 'green',
+                tension: 0.1
+            }]
+        };
+
+        const lineConfig = {
+            type: 'line',
+            data: lineData,
+        };
+
+        const lineChart = new Chart(
+            document.getElementById('financeLineChart'),
+            lineConfig
+        );
+
+        // Update charts when month is selected (this can be extended to change pie data)
+        document.getElementById('monthSelect').addEventListener('change', function() {
+            const selectedMonth = this.value;
+            // Placeholder: you can add logic to update pie chart data based on the selected month
+            alert('You selected: ' + selectedMonth);
+        });
+    </script>
+</body>
+</html>

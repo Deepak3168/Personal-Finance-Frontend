@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="showexpenses.css">
+    <title>Finance Tracker</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-btn">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <!-- Monthly Dropdown -->
+    <div class="dropdown">
+        <label for="month">Select Month:</label>
+        <select id="month" name="month">
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+        </select>
+    </div>
+
+    <!-- Expenses Table -->
+    <div class="expensesdiv">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Expenses</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="expenses-table-body">
+                <!-- Expense rows will be populated here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="showexpenses.js"></script>  <!-- Link to the JavaScript file -->
+</body>
+</html>
