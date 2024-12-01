@@ -4,7 +4,7 @@ function fetchExpenses(month) {
     const formattedMonth = month.charAt(0).toUpperCase() + month.slice(1);
 
     // Make a GET request to fetch expenses for the selected month
-    fetch(`http://127.0.0.1:5000/expenses/month?month=${formattedMonth}`)
+    fetch(`https://expensetrackerapi-mwui.onrender.com/expenses/month?month=${formattedMonth}`)
         .then(response => response.json())
         .then(data => {
             // Get the table body element

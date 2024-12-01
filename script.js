@@ -14,7 +14,7 @@ document.getElementById('expenseForm').addEventListener('submit', function(event
     };
 
     // Make a POST request to the Flask API
-    fetch('http://127.0.0.1:5000/expense', {
+    fetch('https://expensetrackerapi-mwui.onrender.com/expense', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
